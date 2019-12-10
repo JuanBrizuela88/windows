@@ -10,6 +10,9 @@ Creacion de Usuario Log: Security, ID 4720
 Bloqueos de Firewall Log: Security, ID 5152
 Eliminacion de Logs Log: Security, ID, 1102
 #>
+#Se invoca mediante Task Scheduler utilizando uno de los eventos de la lista como trigger
+#Como accion se debe utilizar:
+#powershell-ExecutionPolicy ByPass -File C:\$ruta\$Script
 
 $EmailFrom = "correo@dominio.com"
 
