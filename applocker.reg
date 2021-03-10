@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+;La direccion a modificar en el editor de registros.
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+
+;Esta seccion hace que el valor se evalue como cierto.
+"DisallowRun"=dword:00000001
+
+;Esta seccion bloquea cscript.exe que ejecuta .vbs, .bat, y .js con privilegios.
+;Asi como wscript que hace lo mismo pero con los permisos del usuario actual.
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun]
+"1"="cscript.exe"
+"2"="wscript.exe"
+"3"="vssadmin.exe"
+"4"="powershell.exe"
+"5"="cmd.exe"
